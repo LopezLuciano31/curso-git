@@ -23,6 +23,8 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
+            resultado = sumar(num1,num2);
+            printf("La suma es: %d",resultado);
             break;
 
         case 2:
@@ -30,6 +32,8 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
+            resultado = restar(num1,num2);
+            printf("La resta es: %d",resultado);
             break;
 
         case 3:
@@ -81,3 +85,13 @@ void mostrar_menu()
 }
 
 // Crear las demás funciones aquí
+
+//Funcion para Sumar 2 numeros
+int sumar(int a, int b){
+    return a + b;
+}
+
+//Funcion para Restar 2 numeros
+int restar(int a, int b){
+    return a - b;
+}
