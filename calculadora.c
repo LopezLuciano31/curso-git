@@ -49,8 +49,9 @@ int main()
                 printf("Error: Division por cero no permitida. Ingrese un segundo numero diferente de cero: ");
                 scanf("%d", &num2);
             }
+            resultado_div=dividir(num1,num2);
+            printf("Resultado: %.2f", resultado_div);
             break;
-
         case 5:
             printf("================================\n");
             printf("Gracias por usar la calculadora.\n");
@@ -81,3 +82,8 @@ void mostrar_menu()
 }
 
 // Crear las demás funciones aquí
+
+float dividir(int a, int b){
+    return a/b;
+}
+
