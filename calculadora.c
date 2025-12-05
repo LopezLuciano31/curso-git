@@ -23,6 +23,8 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
+            resultado = sumar(num1,num2);
+            printf("La suma es: %d",resultado);
             break;
 
         case 2:
@@ -30,6 +32,8 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
+            resultado = restar(num1,num2);
+            printf("La resta es: %d",resultado);
             break;
 
         case 3:
@@ -37,7 +41,7 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
-            resultado = multiplicacion(num1,num2);
+            resultado = multiplicar(num1,num2);
             printf("el resultado es : %d",resultado);
             break;
 
@@ -51,8 +55,9 @@ int main()
                 printf("Error: Division por cero no permitida. Ingrese un segundo numero diferente de cero: ");
                 scanf("%d", &num2);
             }
+            resultado_div=dividir(num1,num2);
+            printf("Resultado: %.2f", resultado_div);
             break;
-
         case 5:
             printf("================================\n");
             printf("Gracias por usar la calculadora.\n");
@@ -83,9 +88,23 @@ void mostrar_menu()
 }
 
 //funcion de la multiplicacion 
-int multiplicación(int a , int b){
+int multiplicar(int a , int b){
   int res= a*b ;
   return (res);
 
 }
 // Crear las demás funciones aquí
+
+//Funcion para Sumar 2 numeros
+int sumar(int a, int b){
+    return a + b;
+}
+
+//Funcion para Restar 2 numeros
+int restar(int a, int b){
+    return a - b;
+}
+
+float dividir(int a, int b){
+    return a/b;
+}
