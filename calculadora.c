@@ -37,6 +37,8 @@ int main()
             scanf("%d", &num1);
             printf("Ingrese segundo numero: ");
             scanf("%d", &num2);
+            resultado = multiplicacion(num1,num2);
+            printf("el resultado es : %d",resultado);
             break;
 
         case 4:
@@ -80,4 +82,10 @@ void mostrar_menu()
     printf("Seleccione una opcion: ");
 }
 
+//funcion de la multiplicacion 
+int multiplicación(int a , int b){
+  int res= a*b ;
+  return (res);
+
+}
 // Crear las demás funciones aquí
